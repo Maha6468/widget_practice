@@ -11,23 +11,7 @@ class Container_All extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.cyanAccent,
       ),
-      body: Center(
-        child: Container(
-          //alignment: Alignment.center,
-          height: 500,width: 300,
-          child: Text("This is container"),
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-            color: Colors.amber,
-            shape: BoxShape.rectangle,
-            border: Border.all(
-              color: Colors.deepPurpleAccent,
-              width: 5
-            ),
-          ),
-          transform: Matrix4.rotationZ(.2),
-        ),
-      ),
+      body:
     );
   }
 }
