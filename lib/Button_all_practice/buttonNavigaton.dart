@@ -8,8 +8,7 @@ class ButtonNavigation_P extends StatefulWidget {
 }
 
 class _ButtonNavigation_PState extends State<ButtonNavigation_P> {
-  var currentindex = 0;
-
+var currentindex=0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,6 +34,22 @@ class _ButtonNavigation_PState extends State<ButtonNavigation_P> {
       ),
 
      bottomNavigationBar: BottomNavigationBar(
+       currentIndex:currentindex,
+       onTap: (index){
+         setState(() {
+           currentindex=index;
+         });
+         if(index==0) {
+           ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("this home"),backgroundColor: Colors.cyanAccent,));
+         }
+         else if(index==1){
+           ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("this People"),backgroundColor: Colors.cyanAccent,));
+         }
+         else if(index==2){
+           ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("this Camera"),backgroundColor: Colors.cyanAccent,));
+         }
+
+       },
          items:[
            BottomNavigationBarItem(
              icon: Icon(Icons.home,color: Colors.cyan,),
