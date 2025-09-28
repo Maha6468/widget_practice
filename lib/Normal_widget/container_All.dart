@@ -11,24 +11,20 @@ class ListView_All extends StatelessWidget {
           centerTitle: true,
           backgroundColor: Colors.cyanAccent,
         ),
-        body:
-        ListView.separated(
+        body:ListView.separated(
           itemCount: 5,
           itemBuilder: (context, index) {
-            return ListTile(
-              leading: Icon(Icons.person),
-              title: Text("User $index"),
-            );
-          },
-          separatorBuilder: (context, index) {
-            return Center(
-              child: Text(
-                "--- Section Break ---",
-                style: TextStyle(color: Colors.grey, fontWeight: FontWeight.bold),
+            return Card(
+              child: ListTile(
+                title: Text("Product $index"),
               ),
             );
           },
+          separatorBuilder: (context, index) {
+            return SizedBox(height: 30); // বড় gap
+          },
         )
+
 
     );
   }
