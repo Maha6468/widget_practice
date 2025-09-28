@@ -11,25 +11,26 @@ class ListView_All extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.cyanAccent,
       ),
-      body: ListView.builder(
-        itemCount: 16,
-        itemBuilder: (context,index){
+      body:ListView.builder(
+        itemCount: 10,
+          itemBuilder: (context,index){
           return Card(
-            margin: EdgeInsets.symmetric(vertical: 5),
-            color: Colors.amberAccent,
+            color: Colors.pink,
             elevation: 4,
+            margin: EdgeInsets.symmetric(horizontal:10,vertical: 4),
             child: ListTile(
-              title: Text("Item $index"),
-              leading: CircleAvatar(
-                  radius: 30,
-
-                  child: Icon(Icons.star)),
-              subtitle: Text("this is subtitle"),
-              trailing: CircleAvatar(child: Icon(Icons.arrow_forward)),
+              leading:CircleAvatar(
+                //radius: 20,
+                maxRadius:30,
+                backgroundImage: NetworkImage("https://img.lovepik.com/free-png/20211124/lovepik-natural-woods-png-image_401110806_wh1200.png"),
+              ),
+              title: Text("Maha $index"),
+              subtitle: Text("I am mahabubar of prime university"),
+              trailing: Icon(Icons.accessibility_outlined),
             ),
           );
-        },
-      ),
+          }
+      )
     );
   }
 }
