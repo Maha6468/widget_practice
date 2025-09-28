@@ -14,14 +14,12 @@ class ListView_All extends StatelessWidget {
         body:ListView.separated(
           itemCount: 5,
           itemBuilder: (context, index) {
-            return Card(
-              child: ListTile(
-                title: Text("Product $index"),
-              ),
+            return ListTile(
+              title: Text("Message $index"),
             );
           },
           separatorBuilder: (context, index) {
-            return SizedBox(height: 30); // বড় gap
+            return Icon(Icons.arrow_downward, color: Colors.blue);
           },
         )
 
