@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:widget_practice/Button_all_practice/buttonNavigaton.dart';
 import 'package:widget_practice/Normal_widget/container_All.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home:Container_All()
+      home:MyCoursesPage()
     );
   }
 }
