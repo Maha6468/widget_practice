@@ -21,26 +21,20 @@ class _ListView_AllState extends State<ListView_All>{
           backgroundColor: Colors.cyanAccent,
 
         ),
-        body:Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: GridView.builder(
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 4,
-                  mainAxisSpacing: 7,
-                  crossAxisSpacing: 7
-              ),
-              itemCount: 50,
-              itemBuilder: (context,index){
-                return Container(
-                  height: 50,width: 30,
-                  color: Colors.deepPurpleAccent,
-                  child: Text('Item $index'),
-
-                );
-              }
-
-          ),
+        body:Row(
+          children: [
+            Expanded(
+              child: Container(color: Colors.red, height: 100),
+            ),
+            Expanded(
+              child: Container(color: Colors.green, height: 100),
+            ),
+            Expanded(
+              child: Container(color: Colors.blue, height: 100),
+            ),
+          ],
         )
+
 
     );
   }
