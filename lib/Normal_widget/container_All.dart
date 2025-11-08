@@ -23,17 +23,21 @@ class _ListView_AllState extends State<ListView_All>{
         ),
         body:Row(
           children: [
-            Expanded(
-              child: Container(color: Colors.red, height: 100),
+            Flexible(
+              flex: 3,
+              child: Container(color: Colors.red, width: 100, height: 100),
             ),
-            Expanded(
-              child: Container(color: Colors.green, height: 100),
+            Flexible(
+              flex: 3,
+              child: Container(color: Colors.green, width: 200, height: 100),
             ),
-            Expanded(
-              child: Container(color: Colors.blue, height: 100),
+            Flexible(
+              flex: 3,
+              child: Container(color: Colors.blue, width: 50, height: 100),
             ),
           ],
         )
+
 
 
     );
