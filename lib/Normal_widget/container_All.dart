@@ -50,11 +50,11 @@ class _TodoAppState extends State<TodoApp> {
         foregroundColor: Colors.white,
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(15.0),
         child: Column(
           children: [
             Row(
-              children: [
+          children: [
                 Expanded(
                   child: TextField(
                     controller: _textController,
@@ -78,16 +78,17 @@ class _TodoAppState extends State<TodoApp> {
             ),
 
             const SizedBox(height: 10),
+
             Expanded(
               child:
               todos.isEmpty
-                  ? const Center(
-                child: Text(
-                  'No tasks yet!\nAdd a task to get started.',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 16, color: Colors.grey),
-                ),
-              )
+                  ? Center(
+                    child: Text(
+                      'No tasks yet!\nAdd a task to get started.',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(fontSize: 16, color: Colors.grey),
+                    ),
+                  )
                   : ListView.builder(
                 itemCount: todos.length,
                 itemBuilder: (context, index) {
