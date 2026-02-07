@@ -1,30 +1,3 @@
-// import 'package:flutter/material.dart';
-// import 'package:liquid_swipe/liquid_swipe.dart';
-//
-// class PageProvider extends ChangeNotifier {
-//   final LiquidController controller = LiquidController();
-//   int currentIndex = 0;
-//
-//   void onPageChanged(int index) {
-//     currentIndex = index;
-//     notifyListeners();
-//   }
-//
-//   void nextPage(int totalPages) {
-//     if (currentIndex < totalPages - 1) {
-//       currentIndex++;
-//       controller.jumpToPage(page: currentIndex);
-//       notifyListeners();
-//     }
-//   }
-//
-//   void skipToLast(int totalPages) {
-//     currentIndex = totalPages - 1;
-//     controller.jumpToPage(page: currentIndex);
-//     notifyListeners();
-//   }
-// }
-
 
 import 'package:flutter/material.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
