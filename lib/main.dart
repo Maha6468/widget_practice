@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:widget_practice/Normal_widget/container_All.dart';
 
+import 'Normal_widget/provider.dart';
+
 void main() {
-  runApp(const MyApp());
+  runApp(
+      ChangeNotifierProvider(create:(_)=>PageProvider(),
+      child: MyApp(),),);
 }
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
