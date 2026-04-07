@@ -4,7 +4,7 @@ import 'package:liquid_swipe/liquid_swipe.dart';
 
 class PageProvider with ChangeNotifier {
 
-  int currentIndex = 0;
+  int currentIndex = 1;
   bool isLoading = false;
 
   final LiquidController controller = LiquidController();
